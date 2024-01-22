@@ -13,17 +13,16 @@ Expect multiplication("a", 3) to be an error
 A function called "concatOdds" takes two arrays of integers as arguments. It should return a single array that only contains the odd numbers, in ascending order, from both of the arrays.
 Example: concatOdds([3, 2, 1], [9, 1, 1, 1, 4, 15, -1])
 ...should result in [-1, 1, 3, 9, 15]
-*/
-concatOdds([3,2,1],[9, 1, 1, 1, 4, 15, -1])
+
 function concatOdds(arr1=[],arr2=[]){
     let value = [...new Set(arr1.concat(arr2).filter(num=>Math.abs(num) % 2 === 1))].sort((a,b)=> a<b ? -1 : 1)
-    console.log(value)
     return value;
 }
-/*
+
 Expect concatOdds([1,2,3], [4,5,6]) to be array
 Expect concatOdds([1,2,3], [4,5,6]) to return [1,3,5]
 Expect concatOdds([1,2,3], 4) to be an error
+Expect concatOdds([1,2,3], [4,"d",3,5]) to be an error
 
 Think about the following; you may need to make assumptions or decisions about the prompt and how the code should behave:
 What should happen with unexpected inputs?
@@ -35,4 +34,10 @@ Think about the following; you may need to make assumptions or decisions about t
 What should happen if the cart is empty?
 What needs to be shown to the user at each step of check out?
 What behaviors of this feature does the prompt miss or gloss over?
-Hint: Observe the shopping cart and checkout features of some popular websites to get some ideas!*/
+Hint: Observe the shopping cart and checkout features of some popular websites to get some ideas!
+
+If the care is empty, there should be a prompt to let the user know that the cart is empty.
+The users' account and cart information should be display at each step of the check out.
+There should be a for credentials feature so I can recover my account if I have one and don't remember it.
+
+*/
