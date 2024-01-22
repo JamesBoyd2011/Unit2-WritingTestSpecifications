@@ -36,7 +36,7 @@ What needs to be shown to the user at each step of check out?
 What behaviors of this feature does the prompt miss or gloss over?
 Hint: Observe the shopping cart and checkout features of some popular websites to get some ideas!
 
-If the care is empty, there should be a prompt to let the user know that the cart is empty.
+If the cart is empty, there should be a prompt to let the user know that the cart is empty.
 The users' account and cart information should be display at each step of the check out.
 There should be a for credentials feature so I can recover my account if I have one and don't remember it.
 
